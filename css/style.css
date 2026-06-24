@@ -252,7 +252,9 @@ article p,
 .screenshots {
   display: grid;
   gap: 18px;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(0, 520px));
+  justify-content: center;
+  justify-items: stretch;
 }
 .screenshots figure {
   background: var(--surface);
@@ -260,9 +262,11 @@ article p,
   border-radius: 8px;
   margin: 0;
   overflow: hidden;
-  width: min(520px, 100%);
+  width: 100%;
 }
 .screenshots figure.wide {
+  grid-column: 1 / -1;
+  justify-self: center;
   width: min(1180px, 100%);
 }
 .screenshots img {
