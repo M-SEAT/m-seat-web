@@ -3,106 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="M-SEAT je aplikacija za plan sjedenja, organizaciju gostiju, stolova, tlocrta sale i izvoz dokumenata." />
+    <meta name="description" content="M-SEAT je aplikacija za plan sjedenja, organizaciju gostiju, stolova, tlocrta sale i izvoz dokumenata." data-i18n-attr="content:meta.description" />
     <title>M-SEAT - Plan sjedenja</title>
     <link rel="icon" href="images/logo.png" type="image/png" />
-    <link rel="stylesheet" href="css/style.css?v=20260624-3" />
+    <link rel="stylesheet" href="css/style.css?v=20260624-14" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="M-SEAT početna">
+      <a class="brand" href="#top" aria-label="M-SEAT početna" data-i18n-attr="aria-label:brand.aria">
         <img src="images/logo.png" alt="" />
         <span>
           <strong>M-SEAT</strong>
-          <small>Plan sjedenja</small>
+          <small data-i18n="brand.subtitle">Plan sjedenja</small>
         </span>
       </a>
-      <nav aria-label="Navigacija">
-        <a href="#funkcije">Funkcije</a>
-        <a href="#slike">Slike</a>
-        <a href="#kako-radi">Kako radi</a>
-        <a href="#kontakt">Kontakt</a>
+      <nav aria-label="Navigacija" data-i18n-attr="aria-label:nav.aria">
+        <a href="#funkcije" data-i18n="nav.features">Funkcije</a>
+        <a href="#slike" data-i18n="nav.images">Slike</a>
+        <a href="#kako-radi" data-i18n="nav.how">Kako radi</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       </nav>
+      <button class="language-toggle" id="languageToggle" type="button" aria-label="Promijeni jezik">HR</button>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">M-SEAT</p>
-          <h1>Plan sjedenja.</h1>
-          <p>Jednostavna aplikacija za goste, stolove, tlocrt sale, ispis i dijeljenje projekta s mladencima ili organizatorima.</p>
+          <h1 data-i18n="hero.title">Plan sjedenja.</h1>
+          <p data-i18n="hero.copy">Jednostavna aplikacija za goste, stolove, tlocrt sale, ispis i dijeljenje projekta s mladencima ili organizatorima.</p>
           <div class="hero-actions">
-            <a class="primary-button" href="https://m-seat.web.app/index.html?v=188" target="_blank" rel="noreferrer">Isprobaj aplikaciju</a>
-            <a class="secondary-button" href="#kontakt">Kontakt</a>
+            <a class="primary-button" href="https://m-seat.web.app/index.html?v=188" target="_blank" rel="noreferrer" data-i18n="hero.try">Isprobaj aplikaciju</a>
+            <a class="secondary-button" href="#kontakt" data-i18n="hero.contact">Kontakt</a>
           </div>
         </div>
         <figure class="hero-shot hero-logo-panel">
           <img src="images/logo.png" alt="M-SEAT logo" />
           <figcaption>
             <strong>M-SEAT</strong>
-            <span>Plan sjedenja</span>
+            <span data-i18n="brand.subtitle">Plan sjedenja</span>
           </figcaption>
         </figure>
       </section>
 
-      <section class="promo-banner" aria-label="M-SEAT promotivni prikaz">
-        <img src="images/promo.jpg" alt="M-SEAT promotivni prikaz funkcija za plan sjedenja" />
+      <section class="promo-banner" aria-label="M-SEAT promotivni prikaz" data-i18n-attr="aria-label:promo.aria">
+        <img src="images/promo.jpg" alt="M-SEAT promotivni prikaz funkcija za plan sjedenja" data-i18n-attr="alt:promo.alt" />
       </section>
 
       <section id="funkcije" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Funkcije</p>
-          <h2>Sve za raspored sjedenja na jednom mjestu.</h2>
+          <p class="eyebrow" data-i18n="features.eyebrow">Funkcije</p>
+          <h2 data-i18n="features.title">Sve za raspored sjedenja na jednom mjestu.</h2>
         </div>
         <div class="feature-grid">
-          <article><span>01</span><h3>Organizacija gostiju</h3><p>Dodavanje gostiju, napomene, djeca, grupe i status dolaska.</p></article>
-          <article><span>02</span><h3>Upravljanje stolovima</h3><p>Kapaciteti, popunjenost stolova i brzo premještanje gostiju.</p></article>
-          <article><span>03</span><h3>Tlocrt sale</h3><p>Vizualni raspored stolova i elemenata u prostoru sale.</p></article>
-          <article><span>04</span><h3>PDF / Word / Excel izvoz</h3><p>Dokumenti za ispis, restoran, organizatora ili daljnju obradu.</p></article>
-          <article><span>05</span><h3>Dijeljenje projekata</h3><p>Link za pregled ili uređivanje, vezan za email korisnika.</p></article>
+          <article><span>01</span><h3 data-i18n="features.guests.title">Organizacija gostiju</h3><p data-i18n="features.guests.copy">Dodavanje gostiju, napomene, djeca, grupe i status dolaska.</p></article>
+          <article><span>02</span><h3 data-i18n="features.tables.title">Upravljanje stolovima</h3><p data-i18n="features.tables.copy">Kapaciteti, popunjenost stolova i brzo premještanje gostiju.</p></article>
+          <article><span>03</span><h3 data-i18n="features.floor.title">Tlocrt sale</h3><p data-i18n="features.floor.copy">Vizualni raspored stolova i elemenata u prostoru sale.</p></article>
+          <article><span>04</span><h3 data-i18n="features.export.title">PDF / Word / Excel izvoz</h3><p data-i18n="features.export.copy">Dokumenti za ispis, restoran, organizatora ili daljnju obradu.</p></article>
+          <article><span>05</span><h3 data-i18n="features.share.title">Dijeljenje projekata</h3><p data-i18n="features.share.copy">Link za pregled ili uređivanje, vezan za email korisnika.</p></article>
         </div>
       </section>
 
       <section id="slike" class="section screenshots-section">
         <div class="section-heading">
-          <p class="eyebrow">Slike aplikacije</p>
-          <h2>Stvarni prikaz M-SEAT aplikacije.</h2>
+          <p class="eyebrow" data-i18n="images.eyebrow">Slike aplikacije</p>
+          <h2 data-i18n="images.title">Stvarni prikaz M-SEAT aplikacije.</h2>
         </div>
         <div class="screenshots">
-          <figure class="wide"><img src="images/workspace.png" alt="Glavna radna površina M-SEAT aplikacije" /><figcaption>Gosti, stolovi i tlocrt</figcaption></figure>
-          <figure><img src="images/login.png" alt="M-SEAT prijava" /><figcaption>Prijava</figcaption></figure>
-          <figure><img src="images/project.png" alt="M-SEAT odabir projekta" /><figcaption>Odabir projekta</figcaption></figure>
-          <figure class="wide"><img src="images/admin.png" alt="M-SEAT projektne akcije i početni koraci" /><figcaption>Projektne akcije</figcaption></figure>
-          <figure><img src="images/print-menu.png" alt="M-SEAT izbornik ispisa" /><figcaption>Ispis</figcaption></figure>
-          <figure><img src="images/print-details.png" alt="M-SEAT detaljne opcije ispisa" /><figcaption>PDF, Word i Excel</figcaption></figure>
+          <figure class="wide"><img src="images/workspace.png" alt="Glavna radna površina M-SEAT aplikacije" data-i18n-attr="alt:images.workspace.alt" /><figcaption data-i18n="images.workspace.caption">Gosti, stolovi i tlocrt</figcaption></figure>
+          <figure class="auth-shot"><img src="images/login.png" alt="M-SEAT prijava" data-i18n-attr="alt:images.login.alt" /><figcaption data-i18n="images.login.caption">Prijava</figcaption></figure>
+          <figure class="auth-shot"><img src="images/project.png" alt="M-SEAT odabir projekta" data-i18n-attr="alt:images.project.alt" /><figcaption data-i18n="images.project.caption">Odabir projekta</figcaption></figure>
+          <figure class="wide"><img src="images/admin.png" alt="M-SEAT projektne akcije i početni koraci" data-i18n-attr="alt:images.admin.alt" /><figcaption data-i18n="images.admin.caption">Projektne akcije</figcaption></figure>
+          <figure><img src="images/print-menu.png" alt="M-SEAT izbornik ispisa" data-i18n-attr="alt:images.print.alt" /><figcaption data-i18n="images.print.caption">Ispis</figcaption></figure>
+          <figure><img src="images/print-details.png" alt="M-SEAT detaljne opcije ispisa" data-i18n-attr="alt:images.export.alt" /><figcaption data-i18n="images.export.caption">PDF, Word i Excel</figcaption></figure>
         </div>
       </section>
 
       <section id="kako-radi" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Kako radi</p>
-          <h2>Četiri koraka do gotovog plana.</h2>
+          <p class="eyebrow" data-i18n="how.eyebrow">Kako radi</p>
+          <h2 data-i18n="how.title">Četiri koraka do gotovog plana.</h2>
         </div>
         <div class="steps">
-          <article><span>1</span><h3>Dodaj goste</h3><p>Unesi popis gostiju i označi njihove napomene ili status dolaska.</p></article>
-          <article><span>2</span><h3>Dodaj stolove</h3><p>Postavi stolove, nazive i broj mjesta.</p></article>
-          <article><span>3</span><h3>Napravi raspored</h3><p>Smjesti goste po stolovima i složi tlocrt sale.</p></article>
-          <article><span>4</span><h3>Ispiši ili podijeli</h3><p>Izvezi PDF, Word, Excel ili pošalji link za pregled projekta.</p></article>
+          <article><span>1</span><h3 data-i18n="how.guests.title">Dodaj goste</h3><p data-i18n="how.guests.copy">Unesi popis gostiju i označi njihove napomene ili status dolaska.</p></article>
+          <article><span>2</span><h3 data-i18n="how.tables.title">Dodaj stolove</h3><p data-i18n="how.tables.copy">Postavi stolove, nazive i broj mjesta.</p></article>
+          <article><span>3</span><h3 data-i18n="how.arrange.title">Napravi raspored</h3><p data-i18n="how.arrange.copy">Smjesti goste po stolovima i složi tlocrt sale.</p></article>
+          <article><span>4</span><h3 data-i18n="how.share.title">Ispiši ili podijeli</h3><p data-i18n="how.share.copy">Izvezi PDF, Word, Excel ili pošalji link za pregled projekta.</p></article>
         </div>
       </section>
 
       <section id="cijene" class="section pricing">
         <div>
-          <p class="eyebrow">Cijene</p>
-          <h2>Uskoro</h2>
-          <p>Paketi i cijene bit će objavljeni nakon završnog testiranja.</p>
+          <p class="eyebrow" data-i18n="pricing.eyebrow">Cijene</p>
+          <h2 data-i18n="pricing.title">Uskoro</h2>
+          <p data-i18n="pricing.copy">Paketi i cijene bit će objavljeni nakon završnog testiranja.</p>
         </div>
       </section>
 
       <section id="kontakt" class="section contact">
         <div class="section-heading">
-          <p class="eyebrow">Kontakt</p>
-          <h2>Dogovor za izradu plana sjedenja.</h2>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 data-i18n="contact.title">Dogovor za izradu plana sjedenja.</h2>
         </div>
         <div class="contact-grid">
           <a href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
@@ -114,9 +115,10 @@
 
     <footer class="site-footer">
       <span>M-SEAT © 2026</span>
-      <a href="#top">Na vrh</a>
+      <a href="#top" data-i18n="footer.top">Na vrh</a>
     </footer>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Na vrh">↑</button>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20260624-14"></script>
   </body>
 </html>
