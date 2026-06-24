@@ -251,8 +251,8 @@ article p,
 
 .screenshots {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  justify-items: center;
 }
 .screenshots figure {
   background: var(--surface);
@@ -260,19 +260,20 @@ article p,
   border-radius: 8px;
   margin: 0;
   overflow: hidden;
+  width: min(980px, 100%);
 }
 .screenshots figure.wide {
-  grid-column: 1 / -1;
+  width: min(1120px, 100%);
 }
 .screenshots img {
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top left;
+  background: #f6efe6;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
 }
-.screenshots figure:not(.wide) img {
-  object-fit: contain;
-  background: #f6efe6;
+.screenshots figure.wide img {
+  aspect-ratio: 21 / 9;
 }
 .screenshots figcaption {
   color: var(--accent-dark);
@@ -328,11 +329,24 @@ article p,
 }
 @media (max-width: 680px) {
   .site-header {
-    align-items: flex-start;
+    align-items: stretch;
+    display: grid;
+    gap: 14px;
     position: static;
   }
   nav {
-    display: none;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  nav a {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--accent-dark);
+    font-size: 0.82rem;
+    padding: 10px 6px;
+    text-align: center;
   }
   .hero {
     min-height: auto;
@@ -352,9 +366,6 @@ article p,
   .screenshots,
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-  .screenshots figure.wide {
-    grid-column: auto;
   }
   .site-footer {
     align-items: flex-start;
