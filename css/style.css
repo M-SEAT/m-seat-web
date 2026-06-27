@@ -138,6 +138,79 @@ nav a {
   border: 1px solid var(--line);
   color: var(--accent-dark);
 }
+.hero-qr-link {
+  align-items: center;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(200, 163, 91, 0.28), transparent 34%),
+    linear-gradient(135deg, #071222, #0b2347 58%, #051020);
+  border: 1px solid rgba(200, 163, 91, 0.42);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(7, 18, 34, 0.22);
+  color: #ffffff;
+  display: inline-flex;
+  gap: 16px;
+  margin-top: 16px;
+  max-width: 380px;
+  min-height: 142px;
+  overflow: hidden;
+  padding: 16px 18px;
+  position: relative;
+  transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+.hero-qr-link::after {
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.2) 44%, transparent 62%);
+  content: "";
+  inset: 0 auto 0 -70%;
+  position: absolute;
+  transform: skewX(-18deg);
+  transition: left 420ms ease;
+  width: 52%;
+}
+.hero-qr-link:hover,
+.hero-qr-link:focus-visible {
+  border-color: rgba(200, 163, 91, 0.72);
+  box-shadow: 0 22px 54px rgba(7, 18, 34, 0.3);
+  transform: translateY(-3px);
+}
+.hero-qr-link:hover::after,
+.hero-qr-link:focus-visible::after {
+  left: 118%;
+}
+.hero-qr-frame {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  display: grid;
+  flex: 0 0 auto;
+  height: 112px;
+  place-items: center;
+  width: 112px;
+}
+.hero-qr-frame img {
+  height: 94px;
+  image-rendering: pixelated;
+  width: 94px;
+}
+.hero-qr-text {
+  align-items: start;
+  display: grid;
+  gap: 4px;
+  line-height: 1.08;
+  position: relative;
+  z-index: 1;
+}
+.hero-qr-text strong {
+  display: block;
+  font-size: 1.04rem;
+  font-weight: 850;
+}
+.hero-qr-text span {
+  color: #f2c15d;
+  display: block;
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
 .hero-shot {
   background:
     radial-gradient(circle at 28% 24%, rgba(166, 81, 70, 0.18), transparent 18rem),
@@ -298,10 +371,18 @@ article p,
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .pricing {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
   padding: clamp(26px, 4vw, 48px);
 }
 .pricing p {
   max-width: 620px;
+}
+.pricing-button {
+  flex: 0 0 auto;
+  min-width: 214px;
 }
 .contact-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -438,6 +519,17 @@ article p,
   }
   .hero-logo-panel img {
     width: min(300px, 74vw);
+  }
+  .hero-qr-link {
+    max-width: 100%;
+    width: min(100%, 320px);
+  }
+  .pricing {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .pricing-button {
+    align-self: flex-start;
   }
   .section-heading {
     margin-bottom: 18px;
