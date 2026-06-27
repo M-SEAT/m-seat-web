@@ -6,7 +6,7 @@
     <meta name="description" content="M-SEAT je aplikacija za plan sjedenja, organizaciju gostiju, stolova, tlocrta sale i izvoz dokumenata." data-i18n-attr="content:meta.description" />
     <title>M-SEAT - Plan sjedenja</title>
     <link rel="icon" href="images/logo.png" type="image/png" />
-    <link rel="stylesheet" href="css/style.css?v=20260627-1" />
+    <link rel="stylesheet" href="css/style.css?v=20260627-2" />
   </head>
   <body>
     <header class="site-header">
@@ -32,19 +32,20 @@
           <p class="eyebrow">M-SEAT</p>
           <h1 data-i18n="hero.title">Plan sjedenja.</h1>
           <p data-i18n="hero.copy">Jednostavna aplikacija za goste, stolove, tlocrt sale, ispis i dijeljenje projekta s mladencima ili organizatorima.</p>
-          <div class="hero-actions">
-            <a class="primary-button" href="https://m-seat.web.app/index.html?v=226" target="_blank" rel="noreferrer" data-i18n="hero.try">Isprobaj aplikaciju</a>
-            <a class="secondary-button" href="#kontakt" data-i18n="hero.contact">Kontakt</a>
+          <div class="hero-link-row">
+            <a class="hero-link-panel hero-qr-link" href="https://m-seat.web.app/index.html?v=226" target="_blank" rel="noreferrer" aria-label="Skeniraj ili otvori M-SEAT App" data-i18n-attr="aria-label:hero.qr.aria">
+              <span class="hero-qr-frame" aria-hidden="true">
+                <img src="images/mseat-qr-white.png" alt="" />
+              </span>
+              <span class="hero-qr-text">
+                <strong data-i18n="hero.qr.scan">Skeniraj za otvaranje</strong>
+                <span>M-SEAT App</span>
+              </span>
+            </a>
+            <a class="hero-link-panel hero-contact-link" href="#kontakt" aria-label="Kontakt" data-i18n-attr="aria-label:hero.contact">
+              <span data-i18n="hero.contact">Kontakt</span>
+            </a>
           </div>
-          <a class="hero-qr-link" href="https://m-seat.web.app/index.html?v=226" target="_blank" rel="noreferrer" aria-label="Skeniraj ili otvori M-SEAT App" data-i18n-attr="aria-label:hero.qr.aria">
-            <span class="hero-qr-frame" aria-hidden="true">
-              <img src="images/mseat-qr-white.png" alt="" />
-            </span>
-            <span class="hero-qr-text">
-              <strong data-i18n="hero.qr.scan">Skeniraj za otvaranje</strong>
-              <span>M-SEAT App</span>
-            </span>
-          </a>
         </div>
         <figure class="hero-shot hero-logo-panel">
           <img src="images/logo.png" alt="M-SEAT logo" />
@@ -107,7 +108,9 @@
           <h2 data-i18n="pricing.title">Uskoro</h2>
           <p data-i18n="pricing.copy">Paketi i cijene bit će objavljeni nakon završnog testiranja.</p>
         </div>
-        <a class="primary-button pricing-button" href="https://m-seat.web.app/index.html?v=226" target="_blank" rel="noreferrer" data-i18n="pricing.try">Isprobaj aplikaciju</a>
+        <a class="hero-link-panel pricing-button" href="https://m-seat.web.app/index.html?v=226" target="_blank" rel="noreferrer">
+          <span>M-SEAT App</span>
+        </a>
       </section>
 
       <section id="kontakt" class="section contact">
