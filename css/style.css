@@ -203,9 +203,13 @@ nav a {
   z-index: 1;
 }
 .hero-qr-text strong {
-  display: block;
+  display: grid;
+  gap: 1px;
   font-size: 0.96rem;
   font-weight: 850;
+}
+.hero-qr-text strong span {
+  display: block;
 }
 .hero-qr-text span {
   color: #f2c15d;
@@ -215,15 +219,26 @@ nav a {
   letter-spacing: 0.04em;
 }
 .hero-contact-link {
+  align-content: center;
+  display: grid;
+  gap: 5px;
   justify-content: center;
   min-height: 126px;
   padding: 16px 18px;
-  width: 104px;
+  width: 116px;
 }
 .hero-contact-link span {
   color: #f2c15d;
   font-size: 1.05rem;
   font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.hero-contact-link small {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   position: relative;
   z-index: 1;
 }
