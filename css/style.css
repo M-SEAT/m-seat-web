@@ -83,12 +83,21 @@ nav a {
   width: min(1180px, calc(100% - 32px));
 }
 .hero {
+  align-content: center;
   align-items: center;
+  column-gap: 38px;
   display: grid;
-  gap: 38px;
+  grid-template-areas:
+    "copy logo"
+    "links logo";
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  grid-template-rows: auto auto;
   min-height: calc(100svh - 76px);
   padding-block: 54px;
+  row-gap: 24px;
+}
+.hero-copy {
+  grid-area: copy;
 }
 .hero-copy h1,
 .section-heading h2,
@@ -118,6 +127,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  grid-area: links;
   margin-top: 24px;
 }
 .primary-button,
@@ -256,6 +266,7 @@ nav a {
 .hero-logo-panel {
   align-items: center;
   display: grid;
+  grid-area: logo;
   justify-items: center;
   min-height: 460px;
   text-align: center;
@@ -460,7 +471,14 @@ article p,
 
 @media (max-width: 980px) {
   .hero {
+    align-items: start;
+    gap: 20px;
+    grid-template-areas:
+      "copy"
+      "logo"
+      "links";
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
   .feature-grid,
   .steps {
@@ -534,27 +552,68 @@ article p,
   }
   .hero {
     min-height: auto;
-    padding-block: 38px;
+    gap: 14px;
+    padding-block: 28px 38px;
   }
   .hero-copy h1 {
     font-size: 2.65rem;
   }
+  .hero-copy p {
+    margin-top: 16px;
+  }
+  .hero-link-row {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(0, 1fr) 104px;
+    margin-top: 0;
+    width: 100%;
+  }
   .hero-logo-panel {
-    min-height: 330px;
+    min-height: 280px;
+    padding: 20px;
   }
   .hero-logo-panel img {
-    width: min(320px, 80vw);
+    width: min(292px, 78vw);
   }
   .hero-qr-link {
+    flex: none;
     max-width: 100%;
-    width: min(100%, 320px);
+    min-height: 112px;
+    padding: 11px 12px;
+    width: 100%;
+  }
+  .hero-qr-frame {
+    height: 84px;
+    width: 84px;
+  }
+  .hero-qr-frame img {
+    height: 70px;
+    width: 70px;
+  }
+  .hero-qr-text strong {
+    font-size: 0.9rem;
+  }
+  .hero-qr-text span {
+    font-size: 1rem;
+  }
+  .hero-contact-link {
+    min-height: 112px;
+    padding: 14px 12px;
+    width: 100%;
   }
   .pricing {
     align-items: stretch;
     flex-direction: column;
   }
   .pricing-button {
-    align-self: flex-start;
+    align-self: center;
+    min-height: 62px;
+    min-width: 0;
+    padding: 14px 22px;
+    width: min(100%, 208px);
+  }
+  .pricing-button span {
+    font-size: 1rem;
   }
   .section-heading {
     margin-bottom: 18px;
