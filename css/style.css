@@ -1292,3 +1292,40 @@ article p,
   }
 }
 /* End M-SEAT pricing title position */
+
+
+/* M-SEAT pricing four flow */
+.pricing-flow {
+  gap: 8px;
+  max-width: 620px;
+  padding: 13px 14px;
+}
+
+.pricing-flow span {
+  font-size: 0.86rem;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.pricing-flow b {
+  font-size: 0.68rem;
+  height: 27px;
+  width: 34px;
+}
+
+.pricing-flow i {
+  flex-basis: 24px;
+}
+
+@media (max-width: 860px) {
+  .pricing-flow {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-flow i {
+    display: none;
+  }
+}
+/* End M-SEAT pricing four flow */
