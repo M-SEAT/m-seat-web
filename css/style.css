@@ -1006,3 +1006,289 @@ article p,
   }
 }
 /* End M-SEAT pricing left visual */
+
+
+/* M-SEAT pricing visible workflow override */
+.pricing-copy {
+  min-height: 0;
+}
+
+.pricing-visual-grid {
+  background:
+    linear-gradient(rgba(166, 81, 70, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(166, 81, 70, 0.13) 1px, transparent 1px),
+    rgba(255, 247, 237, 0.94);
+  background-size: 26px 26px;
+  border: 1px solid rgba(166, 81, 70, 0.24);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86), 0 16px 36px rgba(87, 64, 46, 0.1);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  height: auto;
+  left: auto;
+  margin-top: 10px;
+  min-height: 118px;
+  opacity: 1;
+  overflow: hidden;
+  padding: 28px 20px 20px;
+  position: relative;
+  right: auto;
+  width: min(100%, 560px);
+  z-index: 2;
+}
+
+.pricing-visual-grid::before {
+  animation: pricingSweep 4.8s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(242, 193, 93, 0.48), transparent);
+  content: "";
+  height: 100%;
+  left: -42%;
+  position: absolute;
+  top: 0;
+  width: 36%;
+  z-index: 0;
+}
+
+.pricing-flow-line {
+  background: linear-gradient(90deg, rgba(166, 81, 70, 0.12), rgba(166, 81, 70, 0.42), rgba(166, 81, 70, 0.12));
+  height: 2px;
+  left: 18%;
+  position: absolute;
+  right: 18%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.pricing-visual-chip {
+  align-items: center;
+  background: rgba(255, 253, 248, 0.98);
+  border: 1px solid rgba(166, 81, 70, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 12px 26px rgba(87, 64, 46, 0.13);
+  color: var(--accent-dark);
+  display: flex;
+  font-size: 0.88rem;
+  font-weight: 900;
+  gap: 9px;
+  justify-content: center;
+  letter-spacing: 0;
+  min-height: 58px;
+  padding: 12px 10px;
+  position: relative;
+  text-transform: none;
+  z-index: 2;
+}
+
+.pricing-visual-chip b {
+  align-items: center;
+  background: var(--accent);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  height: 26px;
+  justify-content: center;
+  width: 26px;
+}
+
+.pricing-visual-chip.guests,
+.pricing-visual-chip.tables,
+.pricing-visual-chip.pdf {
+  left: auto;
+  top: auto;
+}
+
+.pricing-visual-chip.guests {
+  animation: pricingFloatA 4.8s ease-in-out infinite;
+}
+
+.pricing-visual-chip.tables {
+  animation: pricingFloatB 5.2s ease-in-out infinite;
+}
+
+.pricing-visual-chip.pdf {
+  animation: pricingFloatA 5.6s ease-in-out infinite;
+}
+
+.pricing-visual-dot {
+  background: #f2c15d;
+  border: 2px solid rgba(255, 253, 248, 0.95);
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(242, 193, 93, 0.18);
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  z-index: 3;
+}
+
+.pricing-visual-dot.dot-a { left: 18%; }
+.pricing-visual-dot.dot-b { left: 50%; }
+.pricing-visual-dot.dot-c { left: 82%; }
+
+@keyframes pricingSweep {
+  0%, 18% { transform: translateX(0); }
+  64%, 100% { transform: translateX(400%); }
+}
+
+@keyframes pricingFloatA {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pricingFloatB {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@media (max-width: 720px) {
+  .pricing-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .pricing-flow-line,
+  .pricing-visual-dot {
+    display: none;
+  }
+}
+/* End M-SEAT pricing visible workflow override */
+
+
+/* M-SEAT pricing clean flow */
+.pricing-copy {
+  gap: 18px;
+  min-height: 0;
+}
+
+.pricing-copy > .eyebrow,
+.pricing-copy > h2,
+.pricing-copy > p,
+.pricing-copy > .pricing-package {
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-visual-grid {
+  display: none !important;
+}
+
+.pricing-flow {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(255, 244, 232, 0.92));
+  border: 1px solid rgba(166, 81, 70, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(87, 64, 46, 0.1);
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  max-width: 560px;
+  overflow: hidden;
+  padding: 14px 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-flow::before {
+  animation: pricingFlowShine 5.8s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(242, 193, 93, 0.34), transparent);
+  content: "";
+  inset: 0 auto 0 -32%;
+  position: absolute;
+  width: 28%;
+}
+
+.pricing-flow span {
+  align-items: center;
+  color: var(--ink);
+  display: inline-flex;
+  flex: 1 1 0;
+  font-size: 0.92rem;
+  font-weight: 850;
+  gap: 8px;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-flow b {
+  align-items: center;
+  background: rgba(166, 81, 70, 0.11);
+  border: 1px solid rgba(166, 81, 70, 0.18);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  height: 28px;
+  justify-content: center;
+  width: 36px;
+}
+
+.pricing-flow i {
+  background: rgba(166, 81, 70, 0.26);
+  border-radius: 999px;
+  display: block;
+  flex: 0 0 32px;
+  height: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pricingFlowShine {
+  0%, 24% { transform: translateX(0); }
+  62%, 100% { transform: translateX(520%); }
+}
+
+@media (max-width: 720px) {
+  .pricing-flow {
+    align-items: stretch;
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .pricing-flow span {
+    justify-content: flex-start;
+  }
+
+  .pricing-flow i {
+    display: none;
+  }
+}
+/* End M-SEAT pricing clean flow */
+
+
+/* M-SEAT pricing title position */
+.pricing {
+  align-items: start;
+}
+
+.pricing-copy {
+  align-self: start;
+  gap: 12px;
+  padding-top: 0;
+  transform: translateY(-14px);
+}
+
+.pricing-copy .eyebrow {
+  margin-bottom: 4px;
+}
+
+.pricing-copy h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .pricing-copy {
+    transform: none;
+  }
+}
+/* End M-SEAT pricing title position */
