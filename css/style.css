@@ -735,3 +735,85 @@ article p,
     margin-top: 16px;
   }
 }
+
+
+/* M-SEAT pricing attractive override */
+.pricing {
+  align-items: stretch;
+  display: grid;
+  gap: clamp(22px, 4vw, 44px);
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.72fr);
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 52px);
+  position: relative;
+}
+
+.pricing::before {
+  background: linear-gradient(135deg, rgba(166, 81, 70, 0.13), rgba(242, 193, 93, 0.16));
+  border-radius: 999px;
+  content: "";
+  height: 220px;
+  position: absolute;
+  right: -70px;
+  top: -90px;
+  width: 220px;
+}
+
+.pricing p {
+  max-width: 620px;
+}
+
+.pricing-card {
+  background: rgba(255, 250, 243, 0.88);
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(87, 64, 46, 0.1);
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-card-top {
+  display: grid;
+  gap: 8px;
+}
+
+.pricing-card-top strong {
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.pricing-badge {
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pricing-card .pricing-list {
+  margin: 0;
+}
+
+.pricing-card .pricing-button {
+  align-items: center;
+  justify-content: center;
+  min-height: 68px;
+  min-width: 0;
+  padding: 18px 26px;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 18px;
+  }
+}
+/* End M-SEAT pricing attractive override */
