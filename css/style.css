@@ -190,9 +190,10 @@ nav a {
   padding: 13px 14px;
 }
 .hero-qr-frame {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid rgba(200, 163, 91, 0.38);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 5px #ffffff;
   display: grid;
   flex: 0 0 auto;
   height: 98px;
@@ -200,9 +201,9 @@ nav a {
   width: 98px;
 }
 .hero-qr-frame img {
-  height: 82px;
+  height: 88px;
   image-rendering: pixelated;
-  width: 82px;
+  width: 88px;
 }
 .hero-qr-text {
   align-items: start;
@@ -583,12 +584,12 @@ article p,
     width: 100%;
   }
   .hero-qr-frame {
-    height: 84px;
-    width: 84px;
+    height: 90px;
+    width: 90px;
   }
   .hero-qr-frame img {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
   }
   .hero-qr-text strong {
     font-size: 0.9rem;
@@ -1329,3 +1330,153 @@ article p,
   }
 }
 /* End M-SEAT pricing four flow */
+
+
+/* M-SEAT pricing copy refresh */
+.pricing-card .pricing-list {
+  gap: 10px;
+}
+
+.pricing-card .pricing-list li {
+  line-height: 1.45;
+}
+
+.pricing-card .pricing-button {
+  min-height: 66px;
+}
+
+.pricing-card .pricing-button span {
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+@media (max-width: 720px) {
+  .pricing-card .pricing-button {
+    min-height: 58px;
+  }
+}
+/* End M-SEAT pricing copy refresh */
+
+
+/* M-SEAT language select */
+.language-select {
+  align-items: center;
+  align-self: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  gap: 7px;
+  justify-self: end;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+.language-select span {
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.language-select select {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 850;
+  outline: 0;
+  padding: 0 2px;
+}
+
+@media (max-width: 680px) {
+  .language-select {
+    border: 0;
+    gap: 3px;
+    padding: 0;
+  }
+
+  .language-select span,
+  .language-select select {
+    font-size: 0.52rem;
+  }
+
+  .language-select select {
+    max-width: 56px;
+  }
+}
+/* End M-SEAT language select */
+
+
+/* M-SEAT mobile header readable language */
+@media (max-width: 680px) {
+  .site-header {
+    align-items: center;
+    display: grid;
+    gap: 10px 8px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    overflow: visible;
+    padding: 10px 12px 12px;
+  }
+
+  .site-header .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .site-header .language-select {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    gap: 3px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    min-height: 20px;
+    padding: 2px 4px;
+  }
+
+  .site-header .language-select span {
+    font-size: 0.5rem;
+  }
+
+  .site-header .language-select select {
+    font-size: 0.54rem;
+    max-width: 52px;
+  }
+
+  .site-header nav {
+    background: rgba(255, 253, 248, 0.82);
+    border: 1px solid rgba(166, 81, 70, 0.14);
+    border-radius: 12px;
+    display: flex;
+    gap: 5px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 6px;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header nav a {
+    background: var(--surface-strong);
+    border: 1px solid rgba(166, 81, 70, 0.13);
+    border-radius: 8px;
+    color: var(--accent-dark);
+    flex: 1 0 auto;
+    font-size: 0.68rem;
+    font-weight: 850;
+    line-height: 1.1;
+    min-width: 72px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+}
+/* End M-SEAT mobile header readable language */
