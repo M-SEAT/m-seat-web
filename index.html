@@ -19,7 +19,7 @@
       </a>
       <nav aria-label="Navigacija" data-i18n-attr="aria-label:nav.aria">
         <a href="#funkcije" data-i18n="nav.features">Funkcije</a>
-        <a href="#slike" data-i18n="nav.images">Slike</a>
+        <a href="#slike" data-i18n="nav.images">Prikaz</a>
         <a href="#kako-radi" data-i18n="nav.how">Kako radi</a>
         <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       </nav>
@@ -88,16 +88,45 @@
 
       <section id="slike" class="section screenshots-section">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="images.eyebrow">Slike aplikacije</p>
-          <h2 data-i18n="images.title">Stvarni prikaz M-SEAT aplikacije.</h2>
+          <p class="eyebrow" data-i18n="images.eyebrow">Prikaz aplikacije</p>
+          <h2 data-i18n="images.title">M-SEAT kroz glavne korake.</h2>
+          <p data-i18n="images.copy">Pogledaj kako izgleda put od prijave do gotovih ispisa za salu.</p>
         </div>
-        <div class="screenshots">
-          <figure class="wide"><img src="images/workspace.png" alt="Glavna radna površina M-SEAT aplikacije" data-i18n-attr="alt:images.workspace.alt" /><figcaption data-i18n="images.workspace.caption">Gosti, stolovi i tlocrt</figcaption></figure>
-          <figure class="auth-shot"><img src="images/login.png" alt="M-SEAT prijava" data-i18n-attr="alt:images.login.alt" /><figcaption data-i18n="images.login.caption">Prijava</figcaption></figure>
-          <figure class="auth-shot"><img src="images/project.png" alt="M-SEAT odabir projekta" data-i18n-attr="alt:images.project.alt" /><figcaption data-i18n="images.project.caption">Odabir projekta</figcaption></figure>
-          <figure class="wide"><img src="images/admin.png" alt="M-SEAT projektne akcije i početni koraci" data-i18n-attr="alt:images.admin.alt" /><figcaption data-i18n="images.admin.caption">Projektne akcije</figcaption></figure>
-          <figure><img src="images/print-menu.png" alt="M-SEAT izbornik ispisa" data-i18n-attr="alt:images.print.alt" /><figcaption data-i18n="images.print.caption">Ispis</figcaption></figure>
-          <figure><img src="images/print-details.png" alt="M-SEAT detaljne opcije ispisa" data-i18n-attr="alt:images.export.alt" /><figcaption data-i18n="images.export.caption">PDF, Word i Excel</figcaption></figure>
+        <div class="app-showcase" id="appShowcase">
+          <div class="app-showcase-stage">
+            <figure class="app-showcase-slide is-active" data-showcase-slide="0">
+              <img src="images/login.png" alt="M-SEAT prijava" data-i18n-attr="alt:images.login.alt" />
+              <figcaption><span>01</span><strong data-i18n="images.login.caption">Prijava</strong></figcaption>
+            </figure>
+            <figure class="app-showcase-slide" data-showcase-slide="1">
+              <img src="images/project.png" alt="M-SEAT odabir projekta" data-i18n-attr="alt:images.project.alt" />
+              <figcaption><span>02</span><strong data-i18n="images.project.caption">Odabir projekta</strong></figcaption>
+            </figure>
+            <figure class="app-showcase-slide" data-showcase-slide="2">
+              <img src="images/admin.png" alt="M-SEAT projektne akcije" data-i18n-attr="alt:images.admin.alt" />
+              <figcaption><span>03</span><strong data-i18n="images.admin.caption">Projektne akcije</strong></figcaption>
+            </figure>
+            <figure class="app-showcase-slide" data-showcase-slide="3">
+              <img src="images/workspace.png" alt="Glavna radna površina M-SEAT aplikacije" data-i18n-attr="alt:images.workspace.alt" />
+              <figcaption><span>04</span><strong data-i18n="images.workspace.caption">Gosti, stolovi i tlocrt</strong></figcaption>
+            </figure>
+            <figure class="app-showcase-slide" data-showcase-slide="4">
+              <img src="images/print-menu.png" alt="M-SEAT izbornik ispisa" data-i18n-attr="alt:images.print.alt" />
+              <figcaption><span>05</span><strong data-i18n="images.print.caption">Ispis</strong></figcaption>
+            </figure>
+            <figure class="app-showcase-slide" data-showcase-slide="5">
+              <img src="images/print-details.png" alt="M-SEAT detaljne opcije za PDF, Word i Excel" data-i18n-attr="alt:images.export.alt" />
+              <figcaption><span>06</span><strong data-i18n="images.export.caption">PDF, Word i Excel</strong></figcaption>
+            </figure>
+          </div>
+          <div class="app-showcase-tabs" role="tablist" aria-label="Prikaz M-SEAT aplikacije" data-i18n-attr="aria-label:images.tabs.aria">
+            <button class="is-active" type="button" data-showcase-tab="0"><span>01</span><strong data-i18n="images.login.caption">Prijava</strong></button>
+            <button type="button" data-showcase-tab="1"><span>02</span><strong data-i18n="images.project.caption">Odabir projekta</strong></button>
+            <button type="button" data-showcase-tab="2"><span>03</span><strong data-i18n="images.admin.caption">Projektne akcije</strong></button>
+            <button type="button" data-showcase-tab="3"><span>04</span><strong data-i18n="images.workspace.caption">Gosti, stolovi i tlocrt</strong></button>
+            <button type="button" data-showcase-tab="4"><span>05</span><strong data-i18n="images.print.caption">Ispis</strong></button>
+            <button type="button" data-showcase-tab="5"><span>06</span><strong data-i18n="images.export.caption">PDF, Word i Excel</strong></button>
+          </div>
         </div>
       </section>
 

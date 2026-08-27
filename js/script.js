@@ -122,6 +122,35 @@ languageModalClose?.addEventListener("click", () => {
   chooseInitialLanguage("hr");
 });
 
+const showcaseTabs = Array.from(document.querySelectorAll("[data-showcase-tab]"));
+const showcaseSlides = Array.from(document.querySelectorAll("[data-showcase-slide]"));
+let activeShowcaseIndex = 0;
+
+function setShowcaseSlide(index) {
+  if (!showcaseTabs.length || !showcaseSlides.length) return;
+  activeShowcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
+
+  showcaseSlides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("is-active", slideIndex === activeShowcaseIndex);
+  });
+
+  showcaseTabs.forEach((tab, tabIndex) => {
+    tab.classList.toggle("is-active", tabIndex === activeShowcaseIndex);
+  });
+}
+
+showcaseTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    setShowcaseSlide(Number(tab.dataset.showcaseTab || 0));
+  });
+});
+
+if (showcaseSlides.length > 1) {
+  window.setInterval(() => {
+    setShowcaseSlide(activeShowcaseIndex + 1);
+  }, 4200);
+}
+
 
 const backToTopButton = document.querySelector("#backToTop");
 const featuresSection = document.querySelector("#funkcije");
