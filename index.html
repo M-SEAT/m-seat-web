@@ -101,19 +101,6 @@
         </div>
       </section>
 
-      <section id="kako-radi" class="section">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="how.eyebrow">Kako radi</p>
-          <h2 data-i18n="how.title">Četiri koraka do gotovog plana.</h2>
-        </div>
-        <div class="steps">
-          <article><span>1</span><h3 data-i18n="how.guests.title">Dodaj goste</h3><p data-i18n="how.guests.copy">Unesi popis gostiju i označi njihove napomene ili status dolaska.</p></article>
-          <article><span>2</span><h3 data-i18n="how.tables.title">Dodaj stolove</h3><p data-i18n="how.tables.copy">Postavi stolove, nazive i broj mjesta.</p></article>
-          <article><span>3</span><h3 data-i18n="how.arrange.title">Napravi raspored</h3><p data-i18n="how.arrange.copy">Smjesti goste po stolovima i složi tlocrt sale.</p></article>
-          <article><span>4</span><h3 data-i18n="how.share.title">Ispiši ili podijeli</h3><p data-i18n="how.share.copy">Izvezi PDF, Word, Excel ili pošalji link za pregled projekta.</p></article>
-        </div>
-      </section>
-
       <section id="cijene" class="section pricing">
         <div class="pricing-copy">
           <p class="eyebrow" data-i18n="pricing.eyebrow">Cijene</p>
@@ -151,6 +138,25 @@
         </div>
       </section>
 
+      <section id="kako-radi" class="section how-section">
+        <div class="section-heading how-heading">
+          <p class="eyebrow" data-i18n="how.eyebrow">Kako funkcionira</p>
+          <h2 data-i18n="how.title">Od zahtjeva do gotovih ispisa.</h2>
+          <p data-i18n="how.copy">Sve ide jednostavno: zatraži pristup, uredi svoj projekt i preuzmi gotove dokumente za salu, organizatora ili ispis.</p>
+        </div>
+        <div class="steps how-steps">
+          <article><span>1</span><h3 data-i18n="how.guests.title">Zatraži pristup</h3><p data-i18n="how.guests.copy">Ispuni podatke za projekt i pošalji zahtjev za pristup.</p></article>
+          <article><span>2</span><h3 data-i18n="how.tables.title">M-SEAT potvrđuje projekt</h3><p data-i18n="how.tables.copy">Nakon potvrde dobivaš pristup svom projektu u aplikaciji.</p></article>
+          <article><span>3</span><h3 data-i18n="how.arrange.title">Složi plan sjedenja</h3><p data-i18n="how.arrange.copy">Unesi goste, stolove i tlocrt sale te pomakni sve kako ti odgovara.</p></article>
+          <article><span>4</span><h3 data-i18n="how.share.title">Preuzmi ispise</h3><p data-i18n="how.share.copy">Pripremi PDF, Word i Excel dokumente za daljnji rad ili ispis.</p></article>
+        </div>
+        <div class="how-action">
+          <a class="primary-button how-button" href="https://app.m-seat.com/" target="_blank" rel="noreferrer">
+            <span data-i18n="pricing.cta">Otvori M-SEAT App</span>
+          </a>
+        </div>
+      </section>
+
       <section id="kontakt" class="section contact">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
@@ -169,6 +175,25 @@
       <a href="#top" data-i18n="footer.top">Na vrh</a>
     </footer>
     <button class="back-to-top" id="backToTop" type="button" aria-label="Na vrh">↑</button>
+
+    <div class="language-modal" id="languageModal" aria-hidden="true">
+      <div class="language-modal-card" role="dialog" aria-modal="true" aria-labelledby="languageModalTitle">
+        <button class="language-modal-close" id="languageModalClose" type="button" aria-label="Zatvori odabir jezika">×</button>
+        <div class="language-modal-brand">
+          <img src="images/logo.png" alt="" />
+          <div>
+            <p>M-SEAT</p>
+            <small data-i18n="brand.subtitle">Plan sjedenja</small>
+          </div>
+        </div>
+        <label class="language-modal-search">
+          <span data-i18n="languageModal.searchLabel">Pretraži jezik</span>
+          <input id="languageModalSearch" type="search" placeholder="npr. Hrvatski, English, Deutsch" data-i18n-attr="placeholder:languageModal.searchPlaceholder" />
+        </label>
+        <div class="language-modal-options" id="languageModalOptions"></div>
+        <button class="language-modal-skip" id="languageModalSkip" type="button" data-i18n="languageModal.continue">Nastavi na hrvatskom</button>
+      </div>
+    </div>
 
     <script src="js/i18n/translations-hr.js?v=20260827-1"></script>
     <script src="js/i18n/translations-en.js?v=20260827-1"></script>

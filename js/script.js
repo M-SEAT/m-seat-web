@@ -30,7 +30,8 @@ const languages = languageOptions.map((language) => language.code);
 
 const getText = (language, key) => translations[language]?.[key] ?? translations.hr[key] ?? "";
 
-function applyLanguage(language) {
+function applyLanguage(language, options = {}) {
+  const { persist = true } = options;
   const active = translations[language] ? language : "hr";
   document.documentElement.lang = active;
   document.title = getText(active, "document.title");
@@ -51,14 +52,74 @@ function applyLanguage(language) {
     languageSelect.value = active;
   }
 
-  localStorage.setItem("mseat-web-language", active);
+  if (persist) {
+    localStorage.setItem("mseat-web-language", active);
+  }
 }
 
-const savedLanguage = localStorage.getItem("mseat-web-language") || "hr";
-applyLanguage(savedLanguage);
+const savedLanguage = localStorage.getItem("mseat-web-language");
+applyLanguage(savedLanguage || "hr", { persist: Boolean(savedLanguage) });
 
 document.querySelector("#languageSelect")?.addEventListener("change", (event) => {
   applyLanguage(event.target.value);
+});
+
+const languageModal = document.querySelector("#languageModal");
+const languageModalClose = document.querySelector("#languageModalClose");
+const languageModalSearch = document.querySelector("#languageModalSearch");
+const languageModalOptions = document.querySelector("#languageModalOptions");
+const languageModalSkip = document.querySelector("#languageModalSkip");
+
+function closeLanguageModal() {
+  languageModal?.classList.remove("is-visible");
+  languageModal?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("language-modal-open");
+}
+
+function chooseInitialLanguage(language) {
+  applyLanguage(language);
+  closeLanguageModal();
+}
+
+function renderLanguageModalOptions(filter = "") {
+  if (!languageModalOptions) return;
+  const normalizedFilter = filter.trim().toLowerCase();
+  languageModalOptions.innerHTML = "";
+
+  languageOptions
+    .filter((language) => {
+      const text = `${language.code} ${language.label}`.toLowerCase();
+      return text.includes(normalizedFilter);
+    })
+    .forEach((language) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "language-modal-option";
+      button.dataset.language = language.code;
+      button.innerHTML = `<span>${language.label}</span><small>${language.code.toUpperCase()}</small>`;
+      button.addEventListener("click", () => chooseInitialLanguage(language.code));
+      languageModalOptions.append(button);
+    });
+}
+
+if (languageModal && !savedLanguage) {
+  renderLanguageModalOptions();
+  languageModal.classList.add("is-visible");
+  languageModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("language-modal-open");
+  languageModalSearch?.focus({ preventScroll: true });
+}
+
+languageModalSearch?.addEventListener("input", (event) => {
+  renderLanguageModalOptions(event.target.value);
+});
+
+languageModalSkip?.addEventListener("click", () => {
+  chooseInitialLanguage("hr");
+});
+
+languageModalClose?.addEventListener("click", () => {
+  chooseInitialLanguage("hr");
 });
 
 

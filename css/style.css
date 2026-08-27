@@ -395,6 +395,61 @@ article p,
 .steps {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.how-section {
+  background:
+    radial-gradient(circle at 8% 20%, rgba(242, 193, 93, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(255, 253, 248, 0.92), rgba(255, 247, 237, 0.88));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(87, 64, 46, 0.08);
+  margin-top: 34px;
+  padding: clamp(26px, 4vw, 44px);
+}
+.how-heading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 22px;
+  max-width: 780px;
+}
+.how-heading h2 {
+  margin: 0;
+}
+.how-heading p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.how-steps {
+  counter-reset: how-step;
+}
+.how-steps article {
+  overflow: hidden;
+  padding: 22px;
+  position: relative;
+}
+.how-steps article::after {
+  background: linear-gradient(135deg, rgba(166, 81, 70, 0.08), transparent 62%);
+  content: "";
+  height: 90px;
+  position: absolute;
+  right: -34px;
+  top: -42px;
+  transform: rotate(18deg);
+  width: 90px;
+}
+.how-steps span {
+  box-shadow: inset 0 0 0 1px rgba(166, 81, 70, 0.12);
+}
+.how-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.how-button {
+  box-shadow: 0 16px 34px rgba(166, 81, 70, 0.22);
+  min-width: 220px;
+  justify-content: center;
+}
 .pricing {
   align-items: center;
   display: flex;
@@ -615,6 +670,27 @@ article p,
   }
   .pricing-button span {
     font-size: 1rem;
+  }
+  .how-section {
+    margin-top: 24px;
+    padding: 22px 16px;
+  }
+  .how-heading {
+    gap: 6px;
+  }
+  .how-heading h2 {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+  }
+  .how-steps article {
+    padding: 18px;
+  }
+  .how-action {
+    margin-top: 18px;
+  }
+  .how-button {
+    min-height: 54px;
+    min-width: 0;
+    width: 100%;
   }
   .section-heading {
     margin-bottom: 18px;
@@ -1480,3 +1556,216 @@ article p,
   }
 }
 /* End M-SEAT mobile header readable language */
+
+
+/* M-SEAT first visit language modal */
+body.language-modal-open {
+  overflow: hidden;
+}
+
+.language-modal {
+  align-items: center;
+  background: rgba(35, 28, 23, 0.42);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  overflow: auto;
+  padding: 22px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.language-modal.is-visible {
+  display: flex;
+}
+
+.language-modal-card {
+  background:
+    radial-gradient(circle at 90% 0%, rgba(242, 193, 93, 0.18), transparent 30%),
+    var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(46, 34, 28, 0.24);
+  display: flex;
+  flex-direction: column;
+  max-height: min(760px, calc(100dvh - 44px));
+  max-width: 560px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 36px);
+  position: relative;
+  width: min(100%, 560px);
+}
+
+.language-modal-close {
+  align-items: center;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--accent-dark);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 34px;
+  z-index: 3;
+}
+
+.language-modal-close:hover {
+  border-color: rgba(166, 81, 70, 0.45);
+  transform: translateY(-1px);
+}
+
+.language-modal-brand {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.language-modal-brand img {
+  border-radius: 8px;
+  height: 58px;
+  object-fit: cover;
+  width: 58px;
+}
+
+.language-modal-brand p {
+  color: var(--accent);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+}
+
+.language-modal-brand small {
+  color: var(--ink);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.language-modal-card h2 {
+  font-size: clamp(2.15rem, 7vw, 3.25rem);
+  line-height: 1;
+  margin: 8px 0 10px;
+}
+
+.language-modal-card > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.language-modal-search {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.language-modal-search span {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.language-modal-search input {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  min-height: 52px;
+  outline: 0;
+  padding: 0 15px;
+}
+
+.language-modal-search input:focus {
+  border-color: rgba(166, 81, 70, 0.55);
+  box-shadow: 0 0 0 4px rgba(166, 81, 70, 0.1);
+}
+
+.language-modal-options {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-height: min(280px, 34dvh);
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.language-modal-option,
+.language-modal-skip {
+  align-items: center;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--accent-dark);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 900;
+  justify-content: space-between;
+  min-height: 50px;
+  padding: 0 14px;
+}
+
+.language-modal-option:hover,
+.language-modal-skip:hover {
+  border-color: rgba(166, 81, 70, 0.45);
+  transform: translateY(-1px);
+}
+
+.language-modal-option small {
+  background: rgba(166, 81, 70, 0.09);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  padding: 5px 8px;
+}
+
+.language-modal-skip {
+  background: var(--accent);
+  color: #fff;
+  justify-content: center;
+  margin-top: 14px;
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .language-modal {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .language-modal-card {
+    max-height: calc(100dvh - 28px);
+    padding: 22px 18px 18px;
+  }
+
+  .language-modal-brand img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .language-modal-brand p {
+    font-size: 1.9rem;
+  }
+
+  .language-modal-options {
+    grid-template-columns: 1fr;
+    max-height: min(330px, 42dvh);
+  }
+}
+/* End M-SEAT first visit language modal */
