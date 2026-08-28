@@ -270,12 +270,154 @@ nav a {
   grid-area: logo;
   justify-items: center;
   min-height: 460px;
+  padding: clamp(16px, 3vw, 28px);
   text-align: center;
 }
-.hero-logo-panel img {
-  border-radius: 30px;
-  box-shadow: 0 30px 88px rgba(7, 18, 34, 0.3);
-  width: min(470px, 82vw);
+.hero-visual-cycle {
+  aspect-ratio: 16 / 9;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(242, 193, 93, 0.22), transparent 25%),
+    linear-gradient(135deg, #071222, #0b2347 58%, #051020);
+  border-radius: 14px;
+  box-shadow: 0 30px 88px rgba(7, 18, 34, 0.28);
+  isolation: isolate;
+  max-width: 620px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.hero-visual-cycle::before {
+  animation: heroCycleGlow 7s ease-in-out infinite alternate;
+  background:
+    linear-gradient(115deg, transparent 0 34%, rgba(242, 193, 93, 0.2) 45%, transparent 58%),
+    radial-gradient(circle at 78% 20%, rgba(242, 193, 93, 0.18), transparent 26%);
+  content: "";
+  inset: 0;
+  opacity: 0.72;
+  position: absolute;
+  z-index: 3;
+}
+.hero-cycle-slide {
+  align-items: center;
+  display: grid;
+  inset: 0;
+  justify-content: center;
+  justify-items: center;
+  opacity: 0;
+  place-items: center;
+  position: absolute;
+  z-index: 1;
+}
+.hero-cycle-slide img {
+  display: block;
+}
+.hero-cycle-logo {
+  animation: heroLogoCycle 10s ease-in-out infinite;
+  background:
+    radial-gradient(circle at 30% 24%, rgba(242, 193, 93, 0.2), transparent 30%),
+    linear-gradient(135deg, #071222, #0b2347 58%, #051020);
+  opacity: 1;
+  padding: clamp(14px, 3vw, 34px);
+}
+.hero-cycle-logo img {
+  border-radius: 24px;
+  box-shadow: 0 24px 68px rgba(0, 0, 0, 0.26);
+  height: auto;
+  max-height: 84%;
+  max-width: 82%;
+  object-fit: contain;
+  transform: translateY(-4%);
+  width: auto;
+}
+.hero-cycle-promo {
+  align-items: stretch;
+  animation: heroPromoCycle 10s ease-in-out infinite;
+  justify-content: stretch;
+  justify-items: stretch;
+  place-items: stretch;
+}
+.hero-cycle-promo img {
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+.hero-cycle-logo::after {
+  animation: heroLogoShine 5s ease-in-out infinite;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.16) 44%, transparent 62%);
+  content: "";
+  inset: 0 auto 0 -70%;
+  position: absolute;
+  transform: skewX(-18deg);
+  width: 52%;
+}
+@keyframes heroLogoCycle {
+  0%,
+  43% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  51%,
+  92% {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heroPromoCycle {
+  0%,
+  43% {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+  51%,
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+}
+@keyframes heroLogoShine {
+  0%,
+  35% {
+    left: -70%;
+    opacity: 0;
+  }
+  50% {
+    left: 118%;
+    opacity: 1;
+  }
+  100% {
+    left: 118%;
+    opacity: 0;
+  }
+}
+@keyframes heroCycleGlow {
+  from {
+    transform: translateX(-7%) scale(1.02);
+  }
+  to {
+    transform: translateX(7%) scale(1.04);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual-cycle::before,
+  .hero-cycle-logo,
+  .hero-cycle-promo,
+  .hero-cycle-logo::after {
+    animation: none;
+  }
+  .hero-cycle-logo {
+    opacity: 1;
+  }
 }
 
 .promo-banner {
@@ -295,6 +437,10 @@ nav a {
 
 .section {
   padding-block: 72px;
+}
+#funkcije.section {
+  padding-top: 72px;
+  padding-bottom: 64px;
 }
 .section-heading {
   margin-bottom: 20px;
@@ -723,11 +869,13 @@ article p,
     width: 100%;
   }
   .hero-logo-panel {
-    min-height: 280px;
-    padding: 20px;
+    min-height: 0;
+    padding: 0;
   }
-  .hero-logo-panel img {
-    width: min(292px, 78vw);
+  .hero-cycle-logo img {
+    max-height: 92%;
+    max-width: 90%;
+    transform: none;
   }
   .hero-qr-link {
     flex: none;
