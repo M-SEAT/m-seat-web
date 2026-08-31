@@ -124,7 +124,11 @@ languageModalClose?.addEventListener("click", () => {
 
 const showcaseTabs = Array.from(document.querySelectorAll("[data-showcase-tab]"));
 const showcaseSlides = Array.from(document.querySelectorAll("[data-showcase-slide]"));
+const showcasePrevButton = document.querySelector("[data-showcase-prev]");
+const showcaseNextButton = document.querySelector("[data-showcase-next]");
 let activeShowcaseIndex = 0;
+let showcaseResumeTimer = 0;
+let showcaseIsPaused = false;
 
 function setShowcaseSlide(index) {
   if (!showcaseTabs.length || !showcaseSlides.length) return;
@@ -139,14 +143,34 @@ function setShowcaseSlide(index) {
   });
 }
 
+function pauseShowcaseRotation() {
+  showcaseIsPaused = true;
+  window.clearTimeout(showcaseResumeTimer);
+  showcaseResumeTimer = window.setTimeout(() => {
+    showcaseIsPaused = false;
+  }, 20000);
+}
+
 showcaseTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     setShowcaseSlide(Number(tab.dataset.showcaseTab || 0));
+    pauseShowcaseRotation();
   });
+});
+
+showcasePrevButton?.addEventListener("click", () => {
+  setShowcaseSlide(activeShowcaseIndex - 1);
+  pauseShowcaseRotation();
+});
+
+showcaseNextButton?.addEventListener("click", () => {
+  setShowcaseSlide(activeShowcaseIndex + 1);
+  pauseShowcaseRotation();
 });
 
 if (showcaseSlides.length > 1) {
   window.setInterval(() => {
+    if (showcaseIsPaused) return;
     setShowcaseSlide(activeShowcaseIndex + 1);
   }, 4200);
 }
