@@ -166,11 +166,12 @@ nav a {
 }
 .hero-link-row {
   align-items: stretch;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  gap: clamp(8px, 0.9vw, 12px);
   grid-area: links;
+  grid-template-columns: minmax(0, 1fr) repeat(2, clamp(82px, 9vw, 116px));
   margin-top: 24px;
+  width: 100%;
 }
 .primary-button,
 .secondary-button {
@@ -225,11 +226,10 @@ nav a {
   left: 118%;
 }
 .hero-qr-link {
-  flex: 1 1 276px;
-  gap: 13px;
-  max-width: 292px;
+  justify-content: center;
   min-height: 126px;
-  padding: 13px 14px;
+  min-width: 0;
+  padding: 13px 8px;
 }
 .hero-qr-frame {
   background: #ffffff;
@@ -238,38 +238,14 @@ nav a {
   box-shadow: inset 0 0 0 5px #ffffff;
   display: grid;
   flex: 0 0 auto;
-  height: 98px;
+  aspect-ratio: 1;
   place-items: center;
-  width: 98px;
+  width: min(100%, 98px);
 }
 .hero-qr-frame img {
-  height: 88px;
+  height: 88%;
   image-rendering: pixelated;
-  width: 88px;
-}
-.hero-qr-text {
-  align-items: start;
-  display: grid;
-  gap: 4px;
-  line-height: 1.08;
-  position: relative;
-  z-index: 1;
-}
-.hero-qr-text strong {
-  display: grid;
-  gap: 1px;
-  font-size: 0.96rem;
-  font-weight: 850;
-}
-.hero-qr-text strong span {
-  display: block;
-}
-.hero-qr-text span {
-  color: #f2c15d;
-  display: block;
-  font-size: 1.08rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
+  width: 88%;
 }
 .hero-contact-link {
   align-content: center;
@@ -277,8 +253,16 @@ nav a {
   gap: 5px;
   justify-content: center;
   min-height: 126px;
-  padding: 16px 18px;
-  width: 116px;
+  min-width: 0;
+  padding: 16px 8px;
+}
+.hero-demo-button {
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.hero-contact-link.hero-demo-button span {
+  font-size: 0.92rem;
+  line-height: 1.2;
 }
 .hero-contact-link span {
   color: #f2c15d;
@@ -969,11 +953,7 @@ article p,
     margin-top: 16px;
   }
   .hero-link-row {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: minmax(0, 1fr) 104px;
     margin-top: 0;
-    width: 100%;
   }
   .hero-logo-panel {
     min-height: 0;
@@ -984,31 +964,13 @@ article p,
     max-width: 90%;
     transform: none;
   }
-  .hero-qr-link {
-    flex: none;
-    max-width: 100%;
-    min-height: 112px;
-    padding: 11px 12px;
-    width: 100%;
-  }
-  .hero-qr-frame {
-    height: 90px;
-    width: 90px;
-  }
-  .hero-qr-frame img {
-    height: 80px;
-    width: 80px;
-  }
-  .hero-qr-text strong {
-    font-size: 0.9rem;
-  }
-  .hero-qr-text span {
-    font-size: 1rem;
-  }
+  .hero-qr-link,
   .hero-contact-link {
     min-height: 112px;
-    padding: 14px 12px;
-    width: 100%;
+    padding-block: 10px;
+  }
+  .hero-qr-frame {
+    width: min(100%, 90px);
   }
   .pricing {
     align-items: stretch;

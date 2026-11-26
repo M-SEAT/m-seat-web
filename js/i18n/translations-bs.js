@@ -11,7 +11,7 @@ window.MSEAT_TRANSLATIONS.bs = {
   "nav.contact": "Kontakt",
   "hero.title": "Plan sjedenja.",
   "hero.copy": "Jednostavna aplikacija za goste, stolove, tlocrt sale, ispis i dijeljenje projekta s mladencima ili organizatorima.",
-  "hero.try": "Isprobaj aplikaciju",
+  "hero.try": "Isprobaj demo",
   "hero.contact": "Kontakt",
   "hero.qr.scan": "Skeniraj za otvaranje",
   "hero.qr.scan.primary": "Skeniraj za",

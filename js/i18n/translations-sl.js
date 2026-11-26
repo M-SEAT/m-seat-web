@@ -11,7 +11,7 @@ window.MSEAT_TRANSLATIONS.sl = {
   "nav.contact": "Kontakt",
   "hero.title": "Sedežni red.",
   "hero.copy": "Preprosta aplikacija za goste, mize, tloris dvorane, izpise in deljenje projekta.",
-  "hero.try": "Try the app",
+  "hero.try": "Preizkusi demo",
   "hero.contact": "Contact",
   "hero.qr.scan": "Scan to open",
   "hero.qr.scan.primary": "Scan to",

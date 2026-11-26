@@ -11,7 +11,7 @@ window.MSEAT_TRANSLATIONS.fr = {
   "nav.contact": "Contact",
   "hero.title": "Plan de table.",
   "hero.copy": "Une application simple pour gérer les invités, les tables, le plan de salle, les impressions et le partage du projet.",
-  "hero.try": "Try the app",
+  "hero.try": "Essayer la démo",
   "hero.contact": "Contact",
   "hero.qr.scan": "Scan to open",
   "hero.qr.scan.primary": "Scan to",

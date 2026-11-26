@@ -11,7 +11,7 @@ window.MSEAT_TRANSLATIONS.it = {
   "nav.contact": "Contatto",
   "hero.title": "Piano dei posti.",
   "hero.copy": "Un'app semplice per ospiti, tavoli, layout della sala, stampa e condivisione del progetto con coppie o organizzatori.",
-  "hero.try": "Try the app",
+  "hero.try": "Prova la demo",
   "hero.contact": "Contact",
   "hero.qr.scan": "Scan to open",
   "hero.qr.scan.primary": "Scan to",

@@ -12,7 +12,7 @@ window.MSEAT_TRANSLATIONS.en = {
   "nav.contact": "Contact",
   "hero.title": "Seating plan.",
   "hero.copy": "A simple app for guests, tables, venue layouts, printing and sharing the project with couples or organizers.",
-  "hero.try": "Try the app",
+  "hero.try": "Try the demo",
   "hero.contact": "Contact",
   "hero.qr.scan": "Scan to open",
   "hero.qr.scan.primary": "Scan to",

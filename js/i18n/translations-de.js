@@ -12,7 +12,7 @@ window.MSEAT_TRANSLATIONS.de = {
   "nav.contact": "Kontakt",
   "hero.title": "Sitzplan.",
   "hero.copy": "Eine einfache App für Gäste, Tische, Saalplan, Druck und Teilen des Projekts mit Paaren oder Organisatoren.",
-  "hero.try": "App testen",
+  "hero.try": "Demo ausprobieren",
   "hero.contact": "Kontakt",
   "hero.qr.scan": "Zum Öffnen scannen",
   "hero.qr.scan.primary": "Zum Öffnen",

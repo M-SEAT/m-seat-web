@@ -11,7 +11,7 @@ window.MSEAT_TRANSLATIONS.es = {
   "nav.contact": "Contacto",
   "hero.title": "Plan de asientos.",
   "hero.copy": "Una aplicación sencilla para invitados, mesas, plano del salón, impresión y compartir el proyecto.",
-  "hero.try": "Try the app",
+  "hero.try": "Prueba la demo",
   "hero.contact": "Contact",
   "hero.qr.scan": "Scan to open",
   "hero.qr.scan.primary": "Scan to",
